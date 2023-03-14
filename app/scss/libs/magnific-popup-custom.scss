@@ -1,0 +1,115 @@
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 1;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0;
+}
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 1;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-bg {
+  background: #232323;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  background: #232323;
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  background: #232323;
+}
+
+.mfp-figure::after {
+  display: none;
+}
+.mfp-content {
+  padding: 0;
+}
+.mfp-close {
+  display: none !important;
+}
+.mfp-container {
+  cursor: default;
+}
+.mfp-arrow-right::before {
+}
+.mfp-arrow {
+  margin: 0;
+  opacity: 1;
+  // top: 50%;
+  width: 55px;
+  height: 55px;
+  // transform: translateY(-50%);
+}
+.mfp-arrow::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.mfp-arrow::before {
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  border: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  content: url('data:image/svg+xml; utf8, <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="54" height="54" stroke="white" stroke-opacity="0.38"/><path d="M30 24L26 28L30 32" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
+}
+@media (max-width: 800px) {
+  .mfp-container {
+    padding: 0;
+  }
+}
