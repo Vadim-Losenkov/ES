@@ -1,0 +1,31 @@
+.projects {
+  &__title {
+    margin-bottom: 40px;
+    background: linear-gradient(
+      93.98deg,
+      #161616 5.56%,
+      rgba(66, 66, 66, 0.73) 87.58%,
+      rgba(56, 56, 56, 0.38) 100.52%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &__box {
+    display: flex;
+  }
+  &__item {
+    width: 48%;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  &__item-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark-accent;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+}

@@ -1,0 +1,114 @@
+.about {
+  @extend %image;
+  background-image: url('../images/global/about-bg.jpg');
+  padding-top: 125px;
+  margin-bottom: 157px;
+
+  &__title {
+    span {
+      padding-bottom: 20px;
+      display: inline-block;
+    }
+    max-width: 813px;
+    margin-bottom: 250px;
+  }
+
+  &__form {
+    position: relative;
+  }
+  &__form-content {
+    background: #122a78;
+    max-width: 809px;
+    padding: 50px;
+
+    .top__list-item,
+    .top__list-item::before {
+      opacity: 0.7;
+    }
+  }
+  &__form-content__title {
+    margin-bottom: 25px;
+  }
+
+  &__form-inner {
+    position: absolute;
+    right: 0;
+    background-color: $accent;
+    padding: 64px 92px;
+    max-width: 563px;
+    width: 100%;
+    z-index: 10;
+    bottom: -27px;
+  }
+  &__form-input {
+    background-color: transparent;
+    padding-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: $white;
+    margin-bottom: 18px;
+    max-width: 100%;
+    width: 100%;
+    outline: none;
+
+    &::placeholder {
+      color: #838fb7;
+    }
+  }
+  &__form-button {
+    margin-bottom: 24px;
+  }
+  &__form-checkbox {
+    display: flex;
+    align-items: center;
+  }
+}
+.about__form-warning {
+  display: flex;
+  align-items: center;
+
+  &-input {
+    display: none;
+  }
+
+  &-custom-checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #8d98bc;
+    border-radius: 2px;
+    margin-right: 8px;
+
+    &:after {
+      content: '';
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: #8d98bc;
+      border-radius: 1px;
+    }
+  }
+
+  &-input:checked + &-custom-checkbox:after {
+    display: block;
+  }
+
+  &-text {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #6274af;
+    padding-top: 10px;
+    a {
+      color: #a1afdb;
+    }
+  }
+}

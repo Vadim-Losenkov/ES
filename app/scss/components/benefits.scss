@@ -1,0 +1,56 @@
+.benefits {
+  margin-bottom: 122px;
+  &__title {
+    background: linear-gradient(
+      93.98deg,
+      #161616 5.56%,
+      rgba(66, 66, 66, 0.73) 87.58%,
+      rgba(56, 56, 56, 0.38) 100.52%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 40px;
+  }
+  &__item {
+    @extend %image;
+    margin-bottom: 1px;
+    padding-top: 50px;
+    height: 220px;
+  }
+
+  &__banner {
+    border-bottom: 1px solid $accent;
+    position: relative;
+  }
+  &__banner-text {
+    max-width: 856px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: $dark-accent;
+    padding: 52px 0;
+  }
+  &__banner-download {
+    background-color: $accent;
+    position: absolute;
+    padding: 45px 50px;
+    height: 100%;
+    top: 0;
+
+    right: 0;
+    bottom: 0;
+
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    color: $white;
+    max-width: 679px;
+    width: 100%;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+}

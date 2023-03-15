@@ -8,15 +8,9 @@ html {
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1340px;
   width: 100%;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-
-.container-fluid {
-  max-width: 960px;
-  width: 100%;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
@@ -47,6 +41,12 @@ body {
   min-width: 320px;
   position: relative;
   overflow-x: clip !important;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px !important;
+  line-height: 140% !important;
+  color: $dark-accent;
 }
 
 section {

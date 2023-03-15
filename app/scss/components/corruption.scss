@@ -1,0 +1,95 @@
+.corruption {
+  @extend %image;
+  background-image: url('../../images/global/corruption-bg.svg');
+  position: relative;
+  margin-bottom: 130px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+  &__image {
+    max-width: 456px;
+  }
+
+  &__title {
+    position: relative;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 130%;
+    margin-top: -60px;
+    span {
+      padding-bottom: 20px;
+      display: inline-block;
+    }
+    /* or 55px */
+
+    letter-spacing: 0.01em;
+    font-feature-settings: 'kern' off;
+
+    background: linear-gradient(
+      93.98deg,
+      #161616 5.56%,
+      rgba(66, 66, 66, 0.73) 87.58%,
+      rgba(56, 56, 56, 0.38) 100.52%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    max-width: 840px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -63px;
+      left: -47px;
+      background-image: url('../images/icons/blockquote.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 158px;
+      height: 125px;
+    }
+  }
+
+  &__banner {
+    background-color: $accent;
+    position: absolute;
+    padding: 30px;
+    bottom: -34px;
+    right: 0;
+    max-width: 900px;
+    width: 100%;
+    color: $white;
+  }
+  &__banner-inner {
+    display: flex;
+    align-items: center;
+  }
+  &__banner-item:first-child {
+    padding-right: 27px;
+    margin-right: 27px;
+    border-right: 1px solid rgba(#ffffff, 0.15);
+  }
+  &__banner-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: $white;
+    margin-bottom: 6px;
+  }
+  &__banner-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $white;
+    opacity: 0.9;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

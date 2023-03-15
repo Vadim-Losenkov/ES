@@ -1,0 +1,116 @@
+.top {
+  height: 100vh;
+  height: var(--doc-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  &__inner {
+    @extend %image;
+    background-image: url('../images/global/top-bg.jpg');
+    height: 100%;
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+  &__list {
+    max-width: 755px;
+    margin-bottom: 60px;
+  }
+  &__list-item {
+    position: relative;
+    padding-left: 32px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 13px;
+    color: $white;
+    &::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      position: absolute;
+      background-color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: stretch;
+  }
+  &__button-video {
+    border: 1px solid #ffffff;
+    margin-left: 40px;
+  }
+  &__button-write {
+    margin-left: 12px;
+  }
+
+  &__banner {
+    background-color: $dark-accent;
+    color: #fff;
+    border-top: 1px solid #535667;
+  }
+  &__banner-inner {
+    display: flex;
+  }
+  &__banner-item {
+    // max-width: 400px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    padding: 15px 0;
+
+    &--center {
+      padding: 15px 20px;
+      // margin: 20px 0;
+      border-right: 1px solid #535667;
+      border-left: 1px solid #535667;
+      // flex: none;
+    }
+  }
+  &__banner-title {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 66px;
+    /* identical to box height */
+
+    text-align: center;
+
+    background: radial-gradient(
+        86.54% 276.13% at 42.5% 26.92%,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    sup {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &__banner-info {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.7;
+  }
+}

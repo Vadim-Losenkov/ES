@@ -25,7 +25,8 @@
 		"magnific-popup": "^1.1.0",
 		"masonry-layout": "^4.2.2",
 		"rateyo": "^3.0.0-alpha.2",
-		"select2": "^4.1.0-rc.0"
+		"select2": "^4.1.0-rc.0",
+		"vanilla-masker": "^1.2.0"
 	},
 	"devDependencies": {
 		"browser-sync": "latest",
