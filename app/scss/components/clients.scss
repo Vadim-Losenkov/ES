@@ -1,0 +1,35 @@
+.clients {
+  margin-bottom: 130px;
+  &__title {
+    margin-bottom: 40px;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'kern' off;
+
+    background: linear-gradient(
+      93.98deg,
+      #161616 5.56%,
+      rgba(66, 66, 66, 0.73) 87.58%,
+      rgba(56, 56, 56, 0.38) 100.52%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  &__item {
+    padding: 30px;
+    border: 1px solid #c1c1c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 190px;
+    }
+  }
+}

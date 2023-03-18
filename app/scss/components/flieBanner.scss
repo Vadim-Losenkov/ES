@@ -51,4 +51,48 @@
   .top__list {
     margin-bottom: 0;
   }
+
+  &__form-fileInput {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    & + label * {
+      pointer-events: none;
+    }
+  }
+  &__form-fileInput + label {
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5881ef;
+    cursor: pointer;
+    transition: all 0.3s;
+    .added-file {
+      display: none;
+    }
+    &.active {
+      border: 1px solid $white;
+
+      img {
+        display: none;
+      }
+      .added-file {
+        display: block;
+      }
+    }
+  }
+
+  &__form-fileInput:focus + label,
+  &__form-fileInput + label:hover {
+    border: 1px solid $white;
+  }
+  &__form-fileWrapper + .fileBanner__form-fileWrapper {
+    margin-left: 32px;
+  }
 }

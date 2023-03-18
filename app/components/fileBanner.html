@@ -13,34 +13,72 @@
     </div>
     <form class="fileBanner__form">
       <div class="fileBanner__form-box">
-        <div class="fileBanner__form-flie">
+        <div class="fileBanner__form-file">
           <div class="fileBanner__form-fileText">Прикрепить файл:</div>
           <div class="fileBanner__form-fileBox">
-            <!-- https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->
-            <input type="file" class="fileBanner__form-fileInput" />
-            <input type="file" class="fileBanner__form-fileInput" />
-            <input type="file" class="fileBanner__form-fileInput" />
-          </div>
-          <div class="projects__form-inputWrapper">
-            <input
-              type="tel"
-              class="projects__form-input about__form-input"
-              data-input="phone"
-              placeholder="+_ ___ ___ - __ - __"
-            />
-            <a href="#" class="projects__form-whiteButton white-button">Оставить заявку</a>
-          </div>
-          <div class="about__form-checkbox">
-            <label class="about__form-warning">
-              <input type="checkbox" class="about__form-warning-input" />
-              <span class="about__form-warning-custom-checkbox"></span>
-            </label>
-            <div class="about__form-warning-text">
-              С Положением об <a href="#">Обработке персональных данных</a> и <a href="#"
-                >Политикой конфиденциальности</a
-              >
-              ознакомлен и согласен
+            <div class="fileBanner__form-fileWrapper">
+              <input
+                type="file"
+                name="file-1"
+                id="file-1"
+                data-multiple-caption="{count} files selected"
+                multiple
+                class="fileBanner__form-fileInput"
+              />
+              <label for="file-1">
+                <img src="@img/icons/add-file.svg" alt="add file" />
+                <img class="added-file" src="@img/icons/active-file.svg" alt="added file" />
+              </label>
             </div>
+            <div class="fileBanner__form-fileWrapper">
+              <input
+                type="file"
+                name="file-2"
+                id="file-2"
+                data-multiple-caption="{count} files selected"
+                multiple
+                class="fileBanner__form-fileInput"
+              />
+              <label for="file-2">
+                <img src="@img/icons/add-file.svg" alt="add file" />
+                <img class="added-file" src="@img/icons/active-file.svg" alt="added file" />
+              </label>
+            </div>
+            <div class="fileBanner__form-fileWrapper">
+              <input
+                type="file"
+                name="file-3"
+                id="file-3"
+                data-multiple-caption="{count} files selected"
+                multiple
+                class="fileBanner__form-fileInput"
+              />
+              <label for="file-3">
+                <img src="@img/icons/add-file.svg" alt="add file" />
+                <img class="added-file" src="@img/icons/active-file.svg" alt="added file" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="projects__form-inputWrapper">
+          <input
+            type="tel"
+            class="projects__form-input about__form-input"
+            data-input="phone"
+            placeholder="+_ ___ ___ - __ - __"
+          />
+          <a href="#" class="projects__form-whiteButton white-button">Оставить заявку</a>
+        </div>
+        <div class="about__form-checkbox">
+          <label class="about__form-warning">
+            <input type="checkbox" class="about__form-warning-input" />
+            <span class="about__form-warning-custom-checkbox"></span>
+          </label>
+          <div class="about__form-warning-text">
+            С Положением об <a href="#">Обработке персональных данных</a> и <a href="#"
+              >Политикой конфиденциальности</a
+            >
+            ознакомлен и согласен
           </div>
         </div>
       </div>

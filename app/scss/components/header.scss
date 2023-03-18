@@ -1,4 +1,25 @@
 .header {
+  &.scroll-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(-200px);
+    transition: all 0.3s;
+    background-color: $dark-accent;
+    z-index: 100;
+    border-bottom: 1px solid transparent;
+    &.active {
+      transform: translateY(0);
+    }
+    .header__inner {
+      max-width: 1340px;
+      width: 100%;
+      padding: 0 30px;
+      margin: 0 auto;
+    }
+  }
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   &__logo img {
     height: 45px;

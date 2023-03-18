@@ -1,9 +1,11 @@
-import { isWebp } from './utills.js';
-import Swiper, { Autoplay, EffectFade, Pagination } from 'swiper';
-isWebp();
+import { isWebp } from './utils.js';
+import { infoSlider } from './sliders.js';
 
 import './form.js';
 import './grid.js';
+
+isWebp();
+infoSlider;
 
 const documentHeight = () => {
   const doc = document.documentElement;
@@ -11,20 +13,19 @@ const documentHeight = () => {
 };
 documentHeight();
 
-const infoSlider = new Swiper('.info__slider', {
-  modules: [Pagination, EffectFade, Autoplay],
-  effect: 'fade',
-  loop: true,
-  fadeEffect: {
-    crossFade: true,
-  },
-  autoplay: {
-    delay: 5000,
-    pauseOnMouseEnter: true,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: '.info__slider-pagination',
-    type: 'progressbar',
-  },
+const $headerScrollTop = document.querySelector('.header.scroll-top');
+let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+window.addEventListener('scroll', function () {
+  if ((window.pageYOffset || document.documentElement.scrollTop) > 400) {
+    if ((window.pageYOffset || document.documentElement.scrollTop) > (lastScrollTop || 0)) {
+      // Пользователь прокручивает страницу вниз
+      $headerScrollTop.classList.remove('active');
+    } else {
+      $headerScrollTop.classList.add('active');
+    }
+  } else {
+    $headerScrollTop.classList.remove('active');
+  }
+  lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 });

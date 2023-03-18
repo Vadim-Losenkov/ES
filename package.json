@@ -24,6 +24,7 @@
 		"jquery-validation": "^1.19.5",
 		"magnific-popup": "^1.1.0",
 		"masonry-layout": "^4.2.2",
+		"micromodal": "^0.4.10",
 		"rateyo": "^3.0.0-alpha.2",
 		"select2": "^4.1.0-rc.0",
 		"vanilla-masker": "^1.2.0"

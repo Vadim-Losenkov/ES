@@ -1,0 +1,58 @@
+.documentation {
+  @extend %image;
+  background-image: url('../images/global/documentation-bg.jpg');
+  padding-top: 80px;
+  margin-bottom: 130px;
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  &__content {
+    padding: 60px 60px 50px;
+    max-width: 791px;
+    background-color: $white;
+  }
+  &__title {
+    margin-bottom: 40px;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'kern' off;
+
+    background: linear-gradient(
+      93.53deg,
+      #161616 5.55%,
+      rgba(66, 66, 66, 0.73) 104.37%,
+      rgba(56, 56, 56, 0.38) 119.97%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list-item + .documentation__list-item {
+    margin-top: 15px;
+  }
+  &__list-item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: $dark-accent;
+    padding-left: 40px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 25px;
+      height: 2px;
+      background-color: $dark-accent;
+    }
+  }
+}

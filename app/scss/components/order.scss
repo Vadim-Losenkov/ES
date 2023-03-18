@@ -1,0 +1,55 @@
+.order {
+  padding: 55px 0;
+  @extend %image;
+  background-image: url('../images/global/order-bg.jpg');
+
+  &__content {
+    max-width: 720px;
+  }
+  &__title {
+    margin-bottom: 25px;
+  }
+  &__form-box {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 25px;
+  }
+  .top__list {
+    margin-bottom: 50px;
+  }
+  .projects__form-inputWrapper {
+    margin-bottom: 0;
+  }
+  .projects__form-input {
+    width: 210px;
+  }
+  .accent-button {
+    padding: 0 15px;
+    margin-left: 20px;
+    white-space: nowrap;
+  }
+  .about__form-checkbox {
+    max-width: 500px;
+  }
+  .about__form-warning-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    color: #ffffff;
+    opacity: 0.5;
+    a {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+  }
+  .top__list-item {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #ffffff;
+    opacity: 0.7;
+    &::before {
+      opacity: 0.7;
+    }
+  }
+}
