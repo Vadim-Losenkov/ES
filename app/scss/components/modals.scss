@@ -1,0 +1,67 @@
+.modal-window {
+  max-width: 628px;
+  width: 100%;
+  margin: 50px auto;
+  background: #fff;
+  position: relative;
+}
+
+.mfp-close {
+  display: none !important;
+}
+
+.order-popup {
+  &-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+  &__content {
+    padding: 50px;
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__text {
+    margin-bottom: 25px;
+  }
+  .projects__form-whiteButton {
+    background-color: $accent;
+    color: $white;
+  }
+  .projects__form-input {
+    color: $dark-accent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    &::placeholder {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: rgba(10, 14, 38, 0.6);
+    }
+  }
+  .projects__form-button {
+    color: $accent;
+    margin-bottom: 0;
+    svg path {
+      fill: $accent;
+    }
+    border: 1px solid rgba(8, 32, 110, 0.7);
+
+    &:hover {
+      border: 1px solid rgba(8, 32, 110, 1);
+    }
+  }
+  .about__form-checkbox {
+    margin-bottom: 20px;
+    .about__form-warning-text {
+      color: rgba(10, 14, 38, 0.7) !important;
+      a {
+        color: $accent;
+        text-decoration: underline;
+      }
+    }
+  }
+}

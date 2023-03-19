@@ -18,7 +18,7 @@
 		"@fancyapps/ui": "^5.0.3",
 		"@rateyo/jquery": "^3.0.0-alpha.2",
 		"axios": "^0.27.2",
-		"countup.js": "^2.3.1",
+		"countup.js": "^2.6.0",
 		"gulp-cli": "^2.3.0",
 		"jquery": "^3.6.0",
 		"jquery-validation": "^1.19.5",

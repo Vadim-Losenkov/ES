@@ -14,7 +14,13 @@
         </li>
       </ul>
       <div class="top__buttons">
-        <a href="#" class="top__button-request white-button"> Оставить заявку </a>
+        <a
+          href="#order-popup"
+          data-effect="mfp-zoom-in"
+          class="top__button-request white-button open-popup"
+        >
+          Оставить заявку
+        </a>
         <a href="#" class="top__button-write accent-button">
           <svg
             width="22"
@@ -66,15 +72,15 @@
   <div class="top__banner">
     <div class="top__banner-inner container">
       <div class="top__banner-item">
-        <div class="top__banner-title">10</div>
+        <div class="top__banner-title" id="counterYears"></div>
         <div class="top__banner-info">лет на рынке</div>
       </div>
       <div class="top__banner-item top__banner-item--center">
-        <div class="top__banner-title">2 000 000 м<sup>2</sup></div>
+        <div class="top__banner-title" id="counterArea"></div>
         <div class="top__banner-info">сопровождаем ежемесячно</div>
       </div>
       <div class="top__banner-item">
-        <div class="top__banner-title">505</div>
+        <div class="top__banner-title" id="couterProjects"></div>
         <div class="top__banner-info">завершенных проектов</div>
       </div>
     </div>

@@ -53,10 +53,11 @@
   }
   &__button-video {
     border: 1px solid #ffffff;
-    margin-left: 40px;
+    @include bounce-infinity(2.2s);
   }
   &__button-write {
     margin-left: 12px;
+    margin-right: 40px;
   }
 
   &__banner {
@@ -82,10 +83,14 @@
       // flex: none;
     }
   }
+  #counterArea {
+    padding-right: 78px;
+  }
   &__banner-title {
     font-weight: 700;
     font-size: 54px;
     line-height: 66px;
+    display: inline-block;
     /* identical to box height */
 
     text-align: center;
@@ -101,10 +106,30 @@
     background-clip: text;
     text-fill-color: transparent;
     position: relative;
-    sup {
+
+    .suffix {
       position: absolute;
       right: 0;
-      top: 0;
+      bottom: 0;
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 66px;
+      /* identical to box height */
+
+      text-align: center;
+
+      background: radial-gradient(
+          232.15% 2100.55% at 12.63% 0%,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0.704835) 32.57%,
+          rgba(255, 255, 255, 0.397803) 79.99%,
+          rgba(255, 255, 255, 0) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
   }
   &__banner-info {
@@ -114,5 +139,58 @@
     text-align: center;
     color: #ffffff;
     opacity: 0.7;
+  }
+
+  @media (max-width: 960px) {
+    &__button-video {
+      margin-top: 15px;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 140%;
+      margin-bottom: 25px;
+    }
+    &__buttons {
+      a {
+        white-space: nowrap;
+      }
+      flex-wrap: wrap;
+    }
+    &__list-item {
+      font-size: 16px;
+      line-height: 140%;
+    }
+    &__list {
+      margin-bottom: 70px;
+    }
+    &__banner-title {
+      font-size: 32px;
+      line-height: 39px;
+      .suffix {
+        font-size: 32px;
+        line-height: 39px;
+      }
+    }
+    &__banner-item--center {
+      border: none;
+    }
+    &__banner-info {
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      white-space: pre-wrap;
+    }
+    &__banner-item {
+      padding: 20px 5px;
+    }
+    &__banner-inner {
+      padding: 0;
+    }
+    #counterArea {
+      padding-right: 50px;
+    }
   }
 }

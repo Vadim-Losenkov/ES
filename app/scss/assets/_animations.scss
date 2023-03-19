@@ -1,0 +1,15 @@
+@mixin bounce-infinity($duration: 1s) {
+  animation: bounce-infinity $duration ease-in-out infinite;
+
+  @keyframes bounce-infinity {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}

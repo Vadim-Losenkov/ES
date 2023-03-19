@@ -99,6 +99,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+
+  @media (max-width: 960px) {
+    font-size: 42px;
+    line-height: 120%;
+  }
 }
 
 .title-2 {
@@ -117,6 +122,11 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+
+  @media (max-width: 960px) {
+    font-size: 28px;
+    line-height: 130%;
+  }
 }
 
 .title-3 {
@@ -124,6 +134,12 @@
   font-size: 40px;
   line-height: 120%;
   color: #252525;
+
+  @media (max-width: 960px) {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 120%;
+  }
 }
 
 .title-4 {
@@ -131,6 +147,11 @@
   font-size: 32px;
   line-height: 140%;
   color: #ffffff;
+
+  @media (max-width: 960px) {
+    font-size: 22px;
+    line-height: 140%;
+  }
 }
 
 .title-5 {
@@ -138,6 +159,10 @@
   font-size: 24px;
   line-height: 120%;
   color: #252525;
+  @media (max-width: 960px) {
+    font-size: 20px;
+    line-height: 120%;
+  }
 }
 
 .title-6 {
@@ -145,6 +170,11 @@
   font-size: 20px;
   line-height: 150%;
   color: #ffffff;
+  @media (max-width: 960px) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+  }
 }
 
 .accent-button {

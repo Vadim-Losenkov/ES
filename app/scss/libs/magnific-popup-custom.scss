@@ -60,13 +60,22 @@
 }
 
 .mfp-zoom-in.mfp-bg {
-  background: #232323;
+  background: linear-gradient(0deg, rgba(10, 26, 68, 0.54), rgba(10, 26, 68, 0.54)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  backdrop-filter: blur(5px);
 }
 .mfp-zoom-in.mfp-removing.mfp-bg {
-  background: #232323;
+  background: linear-gradient(0deg, rgba(10, 26, 68, 0.54), rgba(10, 26, 68, 0.54)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  backdrop-filter: blur(5px);
 }
 .mfp-zoom-in.mfp-ready.mfp-bg {
-  background: #232323;
+  background: linear-gradient(0deg, rgba(10, 26, 68, 0.54), rgba(10, 26, 68, 0.54)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  backdrop-filter: blur(5px);
 }
 
 .mfp-figure::after {

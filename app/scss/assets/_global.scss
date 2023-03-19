@@ -47,6 +47,11 @@ body {
   font-size: 20px !important;
   line-height: 140% !important;
   color: $dark-accent;
+
+  @media (max-width: 960px) {
+    font-size: 16px;
+    line-height: 140%;
+  }
 }
 
 section {

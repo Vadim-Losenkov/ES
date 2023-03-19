@@ -1,6 +1,7 @@
-import { isWebp } from './utils.js';
+import { isWebp, counter } from './utils.js';
 import { infoSlider } from './sliders.js';
 
+import './modals.js';
 import './form.js';
 import './grid.js';
 
@@ -29,3 +30,49 @@ window.addEventListener('scroll', function () {
   }
   lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 });
+
+counter([
+  {
+    id: 'counterYears',
+    count: 10,
+    properties: {
+      enableScrollSpy: true,
+      duration: 3,
+    },
+  },
+  {
+    id: 'counterArea',
+    count: 2000000,
+    properties: {
+      enableScrollSpy: true,
+      separator: ' ',
+      duration: 3,
+      suffix: '<div class="suffix">м<sup>2</sup></div>',
+    },
+  },
+  {
+    id: 'couterProjects',
+    count: 505,
+    properties: {
+      enableScrollSpy: true,
+      duration: 3,
+    },
+  },
+]);
+
+// document.querySelector('#file-3').addEventListener('change', previewFile);
+// function previewFile() {
+//   const preview = document.querySelector('#file-3-preview');
+//   const file = document.querySelector('#file-3').files[0];
+//   const reader = new FileReader();
+
+//   reader.onloadend = function () {
+//     preview.src = reader.result;
+//   };
+
+//   if (file) {
+//     reader.readAsDataURL(file);
+//   } else {
+//     preview.src = '#';
+//   }
+// }
