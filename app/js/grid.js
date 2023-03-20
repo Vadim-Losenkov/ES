@@ -46,6 +46,11 @@ const removeItems = (event) => {
       element.classList.add('is-visible');
     }, 100 * index);
   });
+
+  window.scrollTo({
+    top: $container.offsetTop + $container.offsetHeight - 500,
+    behavior: 'smooth',
+  });
 };
 
 let $grid = new Masonry($container, {

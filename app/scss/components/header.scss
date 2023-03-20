@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 5;
   &.scroll-top {
     position: fixed;
     top: 0;
@@ -56,5 +58,93 @@
     padding: 21px 28px;
     height: 100%;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  &__burger {
+    display: none;
+    width: 20px;
+    cursor: pointer;
+    span {
+      transition: all 0.3s;
+      display: block;
+      height: 2px;
+      border-radius: 2px;
+      width: 100%;
+      margin-bottom: 4px;
+      background-color: $white;
+      width: 100%;
+    }
+    &.active {
+      span {
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:first-child {
+          width: 100%;
+          transform: translateY(6.2px) rotate(-135deg);
+        }
+        &:last-child {
+          width: 100%;
+          transform: translateY(-6.2px) rotate(135deg);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &.active {
+      background-color: $accent;
+      transition: all 0.3s;
+    }
+    margin-bottom: 58px;
+    border-bottom: none;
+    transition: all 0.1s;
+    &__logo img {
+      height: 30px;
+    }
+    &__inner {
+      padding: 18px 20px;
+    }
+    &__menu {
+      display: none;
+    }
+    &__burger {
+      display: block;
+    }
+  }
+}
+
+.header-mobile {
+  background-color: $accent;
+  position: fixed;
+  top: 0;
+  bottom: -200px;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  transform: translateY(-1500px);
+  transition: all 0.5s;
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  &__box {
+    padding: 20px;
+    padding-top: 100px;
+    overflow-y: auto;
+    height: 100vh;
+    height: var(--doc-height);
+  }
+  &__phone {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 40px;
+    color: $white;
+  }
+  .footer__contacts-col {
+    margin-bottom: 20px;
   }
 }

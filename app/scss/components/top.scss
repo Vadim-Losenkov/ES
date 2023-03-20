@@ -193,4 +193,52 @@
       padding-right: 50px;
     }
   }
+  @media (max-width: 768px) {
+    height: auto !important;
+    &__title {
+      margin-bottom: 25px;
+      br {
+        display: none;
+      }
+    }
+    &__subtitle {
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 140%;
+    }
+    &__list {
+      margin-bottom: 80px;
+    }
+    &__list-item {
+      font-size: 14px;
+      line-height: 140%;
+      padding-left: 21px;
+      &::before {
+        width: 12px;
+        height: 2px;
+      }
+    }
+    &__buttons {
+      display: block;
+      margin-bottom: 78px;
+    }
+    &__button-write {
+      margin: 15px 0;
+    }
+    #counterArea {
+      padding-right: 28px;
+    }
+    &__banner-title {
+      font-size: 18px;
+      line-height: 22px;
+      .suffix {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    &__banner-info {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
 }

@@ -63,7 +63,85 @@
   }
   &__form-checkbox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 1366px) {
+    &__form-content {
+      margin-left: -20px;
+      padding: 50px 30px 90px;
+      .top__list {
+        max-width: 430px;
+      }
+    }
+    &__form-inner {
+      right: -20px;
+      padding: 40px 60px;
+      max-width: 490px;
+    }
+  }
+  @media (max-width: 960px) {
+    background-image: url('../images/global/about-bg-tablet.jpg');
+    &__form-content {
+      margin-left: -20px;
+      padding: 50px 30px 90px;
+      max-width: 472px;
+      width: 100%;
+      .top__list {
+        max-width: 318px;
+        margin-bottom: 0;
+      }
+    }
+    &__form-inner {
+      right: -20px;
+      padding: 40px 60px;
+      max-width: 402px;
+      width: 100%;
+      bottom: -58px;
+    }
+    &__title {
+      margin-bottom: 211px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 45px;
+    background-image: url('../images/global/about-bg-mobile.jpg');
+    background-position: top;
+    margin-bottom: 80px;
+    &__title {
+      margin-bottom: 145px;
+      font-size: 20px;
+      line-height: 120%;
+      br {
+        display: none;
+      }
+    }
+    &__form-content {
+      max-width: 120%;
+      width: 113%;
+      padding: 40px 20px;
+      padding-bottom: 200px;
+
+      &__title {
+        font-size: 20px;
+        line-height: 120%;
+      }
+    }
+    &__form-inner {
+      padding: 40px 30px;
+      max-width: 100%;
+      position: static;
+      margin-top: -167px;
+      max-width: 105%;
+      width: 113%;
+      margin-right: -10px;
+      margin-left: -10px;
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      bottom: auto;
+    }
   }
 }
 .about__form-warning {
@@ -106,9 +184,10 @@
     font-size: 12px;
     line-height: 150%;
     color: #6274af;
-    padding-top: 10px;
+    padding-top: 0px;
     a {
       color: #a1afdb;
+      display: inline;
     }
   }
 }

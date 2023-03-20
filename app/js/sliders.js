@@ -4,6 +4,7 @@ export const infoSlider = new Swiper('.info__slider', {
   modules: [Pagination, EffectFade, Autoplay],
   effect: 'fade',
   loop: true,
+  grabCursor: true,
   fadeEffect: {
     crossFade: true,
   },

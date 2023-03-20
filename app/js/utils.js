@@ -18,11 +18,3 @@ export function isWebp() {
 }
 
 export const checkPage = (name) => document.body.classList.contains(name);
-
-export function counter(arrayOfProperties) {
-  window.addEventListener('load', () => {
-    arrayOfProperties.forEach((obj) => {
-      new CountUp(obj.id, obj.count, obj.properties);
-    });
-  });
-}

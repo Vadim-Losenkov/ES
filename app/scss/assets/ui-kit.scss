@@ -104,6 +104,10 @@
     font-size: 42px;
     line-height: 120%;
   }
+  @media (max-width: 768px) {
+    font-size: 22px;
+    line-height: 120%;
+  }
 }
 
 .title-2 {
@@ -125,6 +129,10 @@
 
   @media (max-width: 960px) {
     font-size: 28px;
+    line-height: 130%;
+  }
+  @media (max-width: 768px) {
+    font-size: 24px;
     line-height: 130%;
   }
 }
@@ -150,6 +158,10 @@
 
   @media (max-width: 960px) {
     font-size: 22px;
+    line-height: 140%;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
     line-height: 140%;
   }
 }
@@ -188,10 +200,12 @@
   line-height: 22px;
   color: #ffffff;
   transition: all 0.3s;
+  white-space: nowrap;
 
   svg {
     transition: all 0.3s;
     margin-right: 15px;
+    flex: none;
   }
   &:hover {
     background-color: #fff;
@@ -201,6 +215,10 @@
     svg path {
       fill: $accent;
     }
+  }
+  @media (max-width: 960px) {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -218,5 +236,9 @@
 
   &:hover {
     background-color: #eee;
+  }
+  @media (max-width: 960px) {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

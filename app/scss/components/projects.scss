@@ -94,6 +94,53 @@
       background-color: $dark-accent;
     }
   }
+  @media (max-width: 1290px) {
+    .grid-item {
+      width: 46%;
+    }
+    &__item-name {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    &__form-title {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
+    &__form {
+      padding: 40px 20px;
+    }
+    &__form-inputWrapper {
+      display: block;
+      input {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 80px;
+    .grid-item {
+      width: 100%;
+    }
+    &__form {
+      max-width: 120%;
+      width: 113% !important;
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+    &__item-name {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__loadMore {
+      padding-top: 0;
+    }
+    &__loadMore-button {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 .hidden-grid-items {

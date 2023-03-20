@@ -15,9 +15,6 @@
 
   &__title {
     position: relative;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 130%;
     margin-top: -60px;
     span {
       padding-bottom: 20px;
@@ -90,6 +87,52 @@
 
     span {
       font-weight: 700;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &__banner {
+      max-width: 605px;
+    }
+  }
+  @media (max-width: 768px) {
+    background: $white;
+    padding-top: 143px;
+    margin-bottom: 80px;
+    &__inner {
+      padding-bottom: 0;
+      display: block;
+    }
+    &__title::before {
+      width: 158px;
+      height: 125px;
+    }
+    &__banner {
+      max-width: 100%;
+      position: static;
+      width: 100%;
+      padding: 25px 20px;
+    }
+    &__banner-inner {
+      display: block;
+    }
+    &__banner-item:first-child {
+      border: none;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    &__banner-title {
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 9px;
+    }
+    &__banner-text {
+      br {
+        display: none;
+      }
+      font-size: 12px;
+      line-height: 130%;
     }
   }
 }
