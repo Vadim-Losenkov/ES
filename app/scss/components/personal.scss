@@ -49,6 +49,9 @@
       top: 12px;
     }
   }
+  .mobile-apps {
+    display: none;
+  }
   &__content-item {
     position: relative;
     width: 100%;
@@ -63,8 +66,71 @@
       background-image: url('../images/icons/checked-personal.svg');
     }
   }
+  &__content-box {
+    margin-bottom: 40px;
+  }
 
   &__image {
     margin-left: 100px;
+  }
+
+  @media (max-width: 1366px) {
+    &__image {
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 960px) {
+    background-image: url('../images/global/personal-bg-tablet.svg');
+    padding-top: 40px;
+    padding-bottom: 0;
+    margin-bottom: 100px;
+    &__content {
+      max-width: 345px;
+      &-text {
+        font-size: 16px;
+        line-height: 140%;
+      }
+      &-item {
+        font-size: 14px;
+        line-height: 150%;
+        padding-left: 35px;
+        &::before {
+          width: 20px;
+          height: 20px;
+          background-position: center;
+        }
+      }
+      &-apps {
+        display: none;
+      }
+      &-apps.mobile-apps {
+        display: flex;
+        margin-top: 25px;
+        img {
+          height: 41px;
+        }
+      }
+    }
+    &__image {
+      margin-left: 0;
+    }
+    &__image img {
+      height: 340px;
+    }
+  }
+  @media (max-width: 768px) {
+    background-image: url('../images/global/personal-bg-mobile.svg');
+    background-position: top right;
+    margin-bottom: 80px;
+    &__inner {
+      flex-direction: column;
+    }
+    &__image {
+      order: -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
   }
 }

@@ -5,6 +5,7 @@ export const infoSlider = new Swiper('.info__slider', {
   effect: 'fade',
   loop: true,
   grabCursor: true,
+  autoHeight: true,
   fadeEffect: {
     crossFade: true,
   },

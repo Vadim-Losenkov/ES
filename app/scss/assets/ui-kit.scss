@@ -148,6 +148,10 @@
     font-size: 28px;
     line-height: 120%;
   }
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 120%;
+  }
 }
 
 .title-4 {
@@ -173,6 +177,10 @@
   color: #252525;
   @media (max-width: 960px) {
     font-size: 20px;
+    line-height: 120%;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
     line-height: 120%;
   }
 }
