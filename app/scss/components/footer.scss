@@ -26,8 +26,7 @@
     opacity: 0.6;
   }
   &__main-col {
-    // display: flex;
-    // justify-content: space-between;
+    flex: none;
   }
   &__main-call {
     margin-top: 20px;
@@ -38,6 +37,7 @@
     font-size: 18px;
     line-height: 25px;
     color: #ffffff;
+
     a {
       font-family: 'Open Sans';
       font-style: normal;
@@ -49,6 +49,9 @@
       color: #7398fa;
       display: block;
     }
+  }
+  &__contacts-col {
+    margin-left: 32px;
   }
   &__main-whatsapp {
     margin-left: 25px;
@@ -106,6 +109,9 @@
     display: flex;
     justify-content: space-between;
   }
+  &__license-col + .footer__license-col {
+    margin-left: 32px;
+  }
   &__license-col {
     font-weight: 400;
     font-size: 15px;
@@ -113,6 +119,9 @@
     color: #ffffff;
     max-width: 618px;
     width: 100%;
+    p + p {
+      margin-top: 15px;
+    }
   }
   &__copy {
     display: flex;
@@ -123,6 +132,7 @@
     justify-content: space-between;
     max-width: 856px;
     width: 100%;
+    margin-left: 32px;
   }
   &__copy-text,
   &__copy-link {
@@ -130,5 +140,97 @@
     font-size: 15px;
     line-height: 100%;
     color: rgba(255, 255, 255, 0.6);
+  }
+  &__copy-link {
+    margin-left: 20px;
+  }
+
+  @media (max-width: 960px) {
+    &__contacts {
+      flex-wrap: wrap;
+    }
+    &__contacts-col {
+      width: 50%;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    &__license {
+      margin-bottom: 20px;
+    }
+    &__license-inner {
+      display: block;
+    }
+    &__license-col {
+      max-width: 100%;
+      width: 100%;
+      font-size: 12px;
+      p + p {
+        margin-top: 10px;
+      }
+    }
+    &__license-col + .footer__license-col {
+      margin-left: 0;
+      margin-top: 28px;
+    }
+    &__copy {
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
+    &__copy-link {
+      width: 50%;
+      margin: 0;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+    &__copy-text {
+      margin-top: 20px;
+      width: 50%;
+      padding: 0 10px;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    &__logo {
+      margin-bottom: 15px;
+    }
+    &__contacts {
+      display: block;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+    &__contacts-text {
+      font-size: 14px;
+    }
+    &__main-text {
+      font-size: 14px;
+    }
+    &__main-col {
+      margin-bottom: 30px;
+    }
+    &__contacts-col {
+      width: 100%;
+      max-width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__contacts-colItem + .footer__contacts-colItem {
+      margin-top: 20px;
+    }
+    &__copy {
+      display: block;
+    }
+    &__license {
+      margin-bottom: 10px;
+    }
+    &__copy-text,
+    &__copy-link {
+      font-size: 12px;
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+      margin-top: 20px;
+    }
   }
 }

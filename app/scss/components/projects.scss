@@ -141,6 +141,14 @@
       text-align: center;
     }
   }
+  [data-load='decr'] {
+    display: flex !important;
+    flex-direction: column;
+    .projects__loadMore {
+      order: -1;
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .hidden-grid-items {

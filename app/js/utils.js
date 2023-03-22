@@ -1,5 +1,3 @@
-import { CountUp } from 'countup.js';
-
 export function isWebp() {
   // Проверка поддержки webp
   function testWebP(callback) {
@@ -18,3 +16,9 @@ export function isWebp() {
 }
 
 export const checkPage = (name) => document.body.classList.contains(name);
+
+export const onChangeWindow = (fn) => {
+  ['load', 'resize', 'orentationchange'].forEach((event) => {
+    window.addEventListener(event, fn);
+  });
+};

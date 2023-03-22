@@ -1,4 +1,5 @@
 import Masonry from 'masonry-layout';
+import { onChangeWindow } from './utils.js';
 
 const $container = document.querySelector('.projects__box');
 
@@ -24,6 +25,7 @@ const loadItems = (event) => {
       element.classList.add('is-visible');
     }, 100 * index);
   });
+  // changeFormPosition();
 };
 
 const removeItems = (event) => {
@@ -51,11 +53,15 @@ const removeItems = (event) => {
     top: $container.offsetTop + $container.offsetHeight - 500,
     behavior: 'smooth',
   });
+  setTimeout(() => {
+    changeFormPosition();
+  }, 500);
 };
 
 let $grid = new Masonry($container, {
   itemSelector: '.grid-item:not(.hidden)',
   gutter: 50,
+  percentPosition: true,
 });
 
 $container.addEventListener('click', (event) => {
@@ -65,3 +71,36 @@ $container.addEventListener('click', (event) => {
     removeItems(event);
   }
 });
+
+const $gridForm = document.querySelector('[data-load="formIncr"]');
+const $gridButton = document.querySelector('[data-load="incr"]');
+
+function changeFormPosition() {
+  if (window.innerWidth <= 768) {
+    // Находим элементы, которые нужно поменять местами
+    var item1 = $gridForm;
+    var item2 = $gridButton;
+
+    $container.removeChild(item1);
+    $container.removeChild(item2);
+
+    // Меняем элементы местами в DOM
+    $container.insertAdjacentElement('beforeend', item2);
+    $container.insertAdjacentElement('beforeend', item1);
+
+    // Обновляем Masonry.js
+    $grid = new Masonry($container, {
+      itemSelector: '.grid-item:not(.hidden)',
+      gutter: 50,
+      percentPosition: true,
+    });
+
+    $grid.layout();
+
+    // Добавляем элементы обратно в каскадную сетку
+    $container.appendChild(item1);
+    $container.appendChild(item2);
+  }
+}
+
+onChangeWindow(changeFormPosition);

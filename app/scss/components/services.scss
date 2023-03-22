@@ -29,6 +29,8 @@
   &__content {
     background: rgba(9, 32, 108, 0.15);
     backdrop-filter: blur(5.5px);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
     border: 1px solid rgba(216, 216, 216, 0.1);
     display: flex;
     max-width: 840px;
@@ -72,6 +74,9 @@
   }
   @media (max-width: 768px) {
     margin-bottom: 80px;
+    &__title {
+      margin-bottom: 20px;
+    }
     &__content {
       display: block;
     }

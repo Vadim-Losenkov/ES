@@ -112,6 +112,8 @@
   }
   @media (max-width: 768px) {
     background-image: url('../images/global/fileBanner-bg-mobile.svg');
+    padding-bottom: 55px;
+    padding-top: 40px;
     &__title {
       font-size: 22px;
     }
