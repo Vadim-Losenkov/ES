@@ -64,7 +64,7 @@
   }
 
   @media (max-width: 960px) {
-    background: $white;
+    background: $white !important;
     &__image {
       display: block;
       margin: 0 -20px;

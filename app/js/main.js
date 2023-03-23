@@ -15,7 +15,7 @@ const documentHeight = () => {
 onChangeWindow(documentHeight);
 
 const $burger = document.querySelector('.header__burger');
-const $header = document.querySelector('.header');
+const $header = document.querySelector('.header:not(.scroll-top)');
 const $headerMobile = document.querySelector('.header-mobile');
 
 $burger.addEventListener('click', function (e) {

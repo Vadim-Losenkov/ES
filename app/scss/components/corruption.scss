@@ -16,9 +16,9 @@
   &__title {
     position: relative;
     margin-top: -60px;
-    span {
+    div {
       padding-bottom: 20px;
-      display: inline-block;
+      // display: inline-block;
     }
     /* or 55px */
 
@@ -128,9 +128,6 @@
       margin-bottom: 9px;
     }
     &__banner-text {
-      br {
-        display: none;
-      }
       font-size: 12px;
       line-height: 130%;
     }
